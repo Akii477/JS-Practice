@@ -14,13 +14,14 @@ console.log(valueInNumber); // NaN --> Not a number it happens when there are an
 let score1 = null;
 let valueInNumber1 = Number(score1);
 console.log(typeof valueInNumber1);
-console.log(valueInNumber1);
+console.log(valueInNumber1);  // 0
 
 let score2 = undefined;
 let valueInNumber2 = Number(score2);
 console.log(typeof valueInNumber2);
-console.log(valueInNumber2);
+console.log(valueInNumber2); // NaN
 
+// TODO: NOTE
 
 // "33" => 33
 // "33abc" => NaN
@@ -41,3 +42,36 @@ console.log(booleanIsLoggenIn);
 let someNumber = 33;
 let  stringNumber = String(someNumber);
 console.log(stringNumber);
+
+
+// *************************************** OPERATIONS *************************************************
+
+let value = 3;
+let negValue = -value;
+
+// console.log(negValue);
+
+// console.log( 2+2 );
+// console.log( 2-2 );
+// console.log( 2*2 );
+// console.log( 2**3 ); //POWER
+// console.log( 2/2 );
+// console.log( 2%2 ); //Modulus //Remainder
+
+
+let str1 = "Akash";
+let str2 = "Kushwaha";
+
+console.log(str1 +" "+ str2);
+
+
+// TODO: NOTE: First value is as reffered as a Datatype for operations
+
+console.log("1"+ 2); //12 //string
+console.log( 1 + "2"); //12 //num
+console.log( "1" + 2 + 2); //122 //string
+console.log( 3 + 1 + "2" ) //42 // number
+
+
+
+
