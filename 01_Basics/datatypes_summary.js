@@ -48,3 +48,36 @@ console.log(outSideTemp);
 
 
 
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Memory Management ++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack Memory , Heap Memory
+
+// Stack Memory (Primitive Data type ) (Jab bhi stack memory use hota hai to premitive data type ka copy milata hai)
+// Heap Memory ( Non Premitive Data type)  (Reference instead of copy)
+
+
+let fullName = "Akash Mahendra Kushwaha";
+let anotherName = fullName;
+anotherName = "Raj Kushwaha";
+
+console.log(fullName);
+console.log(anotherName);
+
+
+// another example
+ let userOne=
+ {
+    email: "user@gmail.com",
+    upi: "demo@ybl"
+ }
+
+ let userTwo = userOne;
+
+ userTwo.email = "raj2410@gmail.com";
+
+ console.log(userOne.email);
+ console.log(userTwo.email);
+
+
