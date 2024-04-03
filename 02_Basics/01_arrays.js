@@ -27,7 +27,7 @@ console.log(myArr);
 const newArr = myArr.join();
 console.log(myArr);
 console.log(newArr);
-console.log(typeof newArr);
+console.log(typeof newArr); // STRINGS
 
 
 // SLICE, SPLICE
@@ -40,7 +40,7 @@ console.log(myn1);
 console.log("B", myArr);
 
 const myn2 = myArr.splice(1,3);
-console.log(myn2);
+console.log(myn2);  
 console.log("C", myArr);
 
 
