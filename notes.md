@@ -1,2 +1,0 @@
- JavaScript Exceution Context
- {} --> Gl
