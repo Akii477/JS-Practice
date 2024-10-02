@@ -71,7 +71,7 @@ function handleObject(anyobject) {
     
 }
 
-//handleObject(user);
+handleObject(user);
 
 // we can pass direct object.
 handleObject({

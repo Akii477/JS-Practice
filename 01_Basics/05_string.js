@@ -24,7 +24,7 @@ console.log(anotherString);
 
 const newStringOne ="   Akash   ";
 console.log(newStringOne);
-console.log(newStringOne.trim());
+console.log(newStringOne.trim()); // trim out the spaces.
 
 
 const url  = "https://akashkushwaha.com/akash%20kushwaha";
@@ -64,4 +64,10 @@ console.log((fullName.split('a')));
 // JOINING
 const fruitArray = ["Apple" ,"Banana", "Orange"];
 console.log(fruitArray.join((" and ")));
+
+
+const fullname = "Akash Kushwaha";
+const lastindex = fullname.lastIndexOf('h');
+const fistindex = fullname.indexOf('A', );
+console.table([lastindex, fistindex]);
 

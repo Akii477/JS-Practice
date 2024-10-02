@@ -22,7 +22,7 @@ console.log(myArr.includes(9));
 console.log(myArr.indexOf(9)); // -1 if not exists
 
 console.log(myArr);
-
+ 
 
 const newArr = myArr.join();
 console.log(myArr);

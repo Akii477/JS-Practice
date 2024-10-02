@@ -20,7 +20,7 @@ console.log(all_new_heros);
 
 
 // FLAT: 
-const anotherArray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
+coxnst anotherArray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
 
 let usable_another_array = anotherArray.flat(Infinity);
 console.log(usable_another_array);

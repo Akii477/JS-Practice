@@ -17,7 +17,7 @@ console.log(hundreds.toLocaleString('en-IN')); // INDIAN BASED
 // ++++++++++++++++++++++++++++++++++++++++++ MATHS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 console.log(Math);
-console.log(Math.abs(-4));
+console.log(Math.abs(-4)); //4 
 console.log(Math.round(4.6)); //5
 console.log(Math.ceil(4.2)); //5 choose top value;
 console.log(Math.floor(4.9)); // 4 choose least value;
@@ -35,4 +35,11 @@ console.log(Math.floor((Math.random()* (max-min) + 1) + min));
     suppose hamne jab random ko 10 se multiply kiya and there can be chances that value can come 0.9887 or ye floor karane per )0 ho jayega that's we add +1 
     And bahut baar case aata hai ki hume min and max define karana hai like dice game us case me hamne max-min kiya so we get that range and +1 to remove 0 value case but hamko previous value jaisi hi aa rahi hai that means we have to add min taaki hame min value mil sake 
 */
+
+let infinity = 8 / 0;
+let minusinfinity = -8/0;
+let notANumber = 0/0;
+
+console.log( Math.PI);
+
 

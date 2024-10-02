@@ -63,6 +63,31 @@ JsUser.greetingTwo = function()
 console.log(JsUser.greetingTwo());
 
 
+// +++++++++++++++++++++++++++++++++++++++++++++ EXTRA ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+const myName = 'Akash';
+const userName1 = '';
+const userName2 = '';
+// both userName1 and userName 2 have a same memory address.
+const user1 = {
+    firstName : 'Akash'
+}
+
+const user2 = {
+    firstName : 'Amit',
+    lastName : 'Kushwaha',
+    'Akash' : 'web developer'
+}
+
+console.log(user2.lastName);
+console.log(user2['lastName']);
+
+console.log(user2[myName]); // we can access the variable by brackets property but it is not possible in dot operator.
+console.log(user2["first"+"Name"]); // here first is not defined but it concated with name and make as firstName which has a value as amit.
+
+
+
+
 
 
 

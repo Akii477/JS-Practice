@@ -1,12 +1,12 @@
 // Dates
 
 let myDate = new Date();
-console.log(myDate.toString());
-console.log(myDate.toDateString());
-console.log(myDate.toISOString());
-console.log(myDate.toLocaleDateString());
-console.log(myDate.toTimeString());
-console.log(myDate.toLocaleTimeString());
+console.log(myDate.toString()); //Tue Apr 09 2024 15:46:10 GMT+0530 (India Standard Time)
+console.log(myDate.toDateString()); //Tue Apr 0 9 2024
+console.log(myDate.toISOString()); //2024-04-09T10:16:10.806Z
+console.log(myDate.toLocaleDateString()); //9/4/2024
+console.log(myDate.toTimeString()); // 15:46:10 GMT+0530 (India Standard Time)
+console.log(myDate.toLocaleTimeString()); //3:46:10 pm
 
 console.log(typeof myDate); //interview question ---> OBJECT
 

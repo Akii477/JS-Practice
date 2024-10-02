@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM BASICS</title>
+    <style>
+      .enlargedText {
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="exp1"
+      style="border: 2px solid tomato; padding: 13px; margin-bottom: 10px"
+    >
+      <h2>1. On Button Click changes the statement</h2>
+      <p id="para">JavaScript can change the HTML content</p>
+
+      <button
+        type="button"
+        onclick='getElementById("para").innerHTML="Hello JavaScript"'
+      >
+        Click Me
+      </button>
+    </div>
+
+    <div
+      class="exp2"
+      style="border: 2px solid tomato; padding: 13px; margin-top: 10px"
+    >
+      <h2>2. Changes the HTML styles</h2>
+      <p id="para2">JavaScript can change the style of an HTML element.</p>
+      <!-- Button to add the 'enlargedText' class -->
+      <button
+        type="button"
+        onclick="document.getElementById('para2').classList.add('enlargedText')"
+      >
+        Enlarge Font
+      </button>
+      <!-- Button to remove the 'enlargedText' class -->
+      <button
+        type="button"
+        onclick="document.getElementById('para2').classList.remove('enlargedText')"
+      >
+        Normal Font
+      </button>
+    </div>
+
+    <div class="exp3">
+        <h2>JavaScript Can Hide HTML Elements</h2>
+        <p id="para3">Akash Kushwaha</p>
+        <button type="button" onclick='document.getElementById("para3").style.display="none"'>Hide</button>
+        <button type="button" onclick='document.getElementById("para3").style.display="block"'>Show</button>
+    </div>
+  </body>
+</html>

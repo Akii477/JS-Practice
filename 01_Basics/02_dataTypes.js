@@ -5,17 +5,17 @@
 let name = "Akash";
 let age = 21;
 let isLoggerIn = false;
+let state = null;
 
 // number
 // bigint
 // string
 // boolean
-// null
+// null => standalone value
 // undefined
 //  symbol => when we talk about unique it is symbol
 
-
 // OBJECT
 
-console.log( typeof undefined); // undefined
+console.log(typeof undefined); // undefined
 console.log(typeof null); // OBJECT
