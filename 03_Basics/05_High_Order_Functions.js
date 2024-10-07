@@ -4,7 +4,7 @@ const area = (radius)=> 2*Math.PI*radius*radius;
 
 const circumference = (radius) => 2 * Math.PI * radius;
 
-const logicalFunction = function(radius,logic) // code logic is same as MAP function.
+const logicalFunction = function(radius,logic) // code logic is same as MAP function
 {
     const output = [];
     for(let i=0; i<radius.length; i++)
