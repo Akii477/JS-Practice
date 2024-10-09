@@ -1,2 +1,2 @@
 # JS-Practice
-A code repo for JavaScript concepts and Practices
+A code repository for JavaScript concepts and Practices
