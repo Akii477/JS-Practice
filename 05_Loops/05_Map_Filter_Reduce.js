@@ -47,7 +47,6 @@ let arr3 = [1,2,3,5,2,1]
 let arr3Ans = arr3.reduce((element,copyElement) => element+copyElement);
 // console.log(arr3Ans);//14
 
-
 let shoppingCart = [
     {
         itemName : "Js Course",
@@ -64,6 +63,66 @@ let shoppingCart = [
 ]
 
 let totalValue = shoppingCart.reduce((acc,currentValue)=>acc + currentValue.price,0);
-console.log(totalValue);
+// console.log(totalValue);
+
+
+//FIND MAX VALUE IN ARRAY;
+const num = [5,1,3,2,6];
+
+const output = num.reduce((max,curr)=>{
+    if(curr > max)
+    {
+        max = curr;
+    }
+    return max;
+});
+
+// console.log(output);
+
+// FIND THE FREQUENCY OF THE AGE 
+
+const user = 
+[
+    {firstName:"Akash",lastName:"Kushwaha",age:26},
+    {firstName:"Vinay",lastName:"Verma",age:75},
+    {firstName:"Elon",lastName:"Musk",age:50},
+    {firstName:"Abhijeet",lastName:"Singh",age:26},
+
+];
+
+const useroutput = user.reduce((acc,curr) =>
+{
+    if(acc[curr.age])
+    {
+        acc[curr.age] = ++acc[curr.age];
+    }
+    else
+    {
+        acc[curr.age] = 1;
+    }
+    return acc;
+},{})
+
+// console.log(useroutput);//{ '26': 2, '50': 1, '75': 1 }
+
+// REDUCE CAN BE USED IN MANY PLACES SUPPOSE YOU HAVE AN ARRAY AND WANT A SINGLE VALUE AS A ANS THEN WE CAN DO OPERATIONS WITH THE HELP OF REDUCE METHOD.
+
+
+// list of all the firstname who has age less than 30.
+const ageFilter = user
+                    .filter(users => users.age <30)
+                    .map(users => users.firstName);
+console.log(ageFilter);
+
+const ageReduce = user.reduce( (lessAge, curr) =>
+{
+    if(curr.age < 30)
+    {
+        lessAge.push(curr.firstName)
+    }
+    return lessAge;
+},[])
+
+console.log(ageReduce);
 
 
