@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .bg-black
+        {
+            background-color: #212121;
+            color: white;
+        }
+        .heading
+        {
+            background-color: rgb(255, 255, 97);
+            color: #0e006c;
+        }
+        
+    </style>
+    <title>DOM Learning</title>
+    
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM learning. <span style="display: none;">Test Text</span></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <!-- title.innerHTML, title.innerText, title.textContent. -->
+    </div>
+    <span>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+    <h2 class="heading">QUERY SELECTOR</h2>
+    <p>Change the text of the first p element in "myDIV":</p>
+
+    <div id="myDIV" style="border:1px solid white;padding:8px">
+        <p>This is a p element.</p> <del>This is a p element</del>
+        <p>This is also a p element.</p>
+    </div>
+    <script>
+        const x = document.getElementById("myDIV");
+        x.querySelector("p").innerHTML = "Hello World!";
+    </script>
+
+    <span>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+    <div class="querySelectorAllTopic">
+        <h2 class="heading">Query Selector All.</h2>
+        <div>A div element</div>
+        <p>A p element.</p>
+        <p>A p element.</p>
+
+        <div class="example">
+            <p>A p element inside a div element.</p>
+        </div>
+
+        
+    </div>    
+    <p id="demo"></p>
+    <script>
+        const nodeList = document.getElementsByClassName('querySelectorAllTopic')[0].querySelectorAll('p');
+        for(let i=0; i<nodeList.length; i++)
+        {
+            nodeList[i].style.color ='red';
+        }   
+
+        const classLength = document.querySelectorAll(".heading");
+        document.getElementById("demo").innerHTML = `The total count of class "heading" is used are: ${classLength.length}`;
+    </script>
+
+</body>
+</html>
