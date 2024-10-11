@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Create a new Element in Script</title>
+    <style>
+        *{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let divElement =document.createElement('div');
+    console.log(divElement);
+    divElement.className = "Main";
+    divElement.id = "myId";
+    divElement.setAttribute('title',"generated Title");
+    divElement.style.backgroundColor = 'green';
+    divElement.style.padding = '12px';
+
+    // divElement.innerText = "Akash Kushwaha"; //1.it firstly takes the value 2. then it overrides the values
+    // so it is two way process.
+
+    const addText = document.createTextNode("Akash Kushwaha");
+    divElement.appendChild(addText);
+
+    document.body.appendChild(divElement);
+
+    
+</script>
+</html>
