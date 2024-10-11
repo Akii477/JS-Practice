@@ -125,4 +125,6 @@ const ageReduce = user.reduce( (lessAge, curr) =>
 
 console.log(ageReduce);
 
+console.log("Kuch to kar le yaar");
+
 
