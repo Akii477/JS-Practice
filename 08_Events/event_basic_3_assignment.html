@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Async Assignment</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        let intervalId; // The intervalId is used to store the identifier of the interval created by the setInterval function. This identifier is crucial because it allows you to control the interval later, specifically to stop it using the clearInterval function.
+        let count = 0;
+
+        const changedText = function(str) {
+            count++;
+            console.count(str);
+            document.getElementById('heading').innerHTML = `${str} count: ${count}`;
+        }
+
+        document.querySelector('#start').addEventListener('click', () => {
+            // !intervalId show the event is still null if not then it's running.
+            if (!intervalId) {
+                intervalId = setInterval(changedText, 2000, "Async Assignment Started");
+            }
+        });
+
+        document.querySelector('#stop').addEventListener('click', () => {
+            clearInterval(intervalId);
+            intervalId = null;
+        });
+    </script>
+</body>
+</html>

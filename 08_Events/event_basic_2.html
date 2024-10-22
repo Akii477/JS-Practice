@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async function</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayAkash =  function()
+    {
+        console.log("Akash");
+        
+    }
+
+    const changeText = function()
+    {
+        document.querySelector('h1').innerHTML = "ASYNC Function with example."
+    }
+
+    // setTimeout(sayAkash, 2000);
+    // clearTimeout(changeMe)  // in clearTimeout it needs reference.
+    const changeMe = setTimeout(changeText, 2000);
+
+
+    //for clearTimeout we have to create event nahi to mtlb kya hoga to create setTimeout then suddent clearTimeout. 
+    document.querySelector('#stop').addEventListener('click',()=>
+    {
+        clearTimeout(changeMe);
+        console.log('Stopped');
+    })
+</script>
+</html>

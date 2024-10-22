@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyBoard Event in JavaScript</title>
+</head>
+<body>
+    <h1>This is an example of Keboard event</h1>
+    <p id="clicked"></p>
+</body>
+<script>
+    let text = document.getElementById('clicked');
+
+    document.addEventListener('keydown',event=>
+    {
+        let keypressed = event.key;
+        text.innerHTML += `A key is pressed: ${keypressed}<br>`;
+    },false);
+
+    document.addEventListener('keyup',event =>
+    {
+        let keyReleased = event.key;
+        text.innerHTML += `A key is released: ${keyReleased}<br><br>`;
+    },false);
+</script>
+</html>

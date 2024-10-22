@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Event in JavaScript</title>
+    <style>
+      #hoverText {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <ol type="A">
+      Mouse Event:
+      <li>mouseover</li>
+      <li>mouseout</li>
+      <li>mousedown</li>
+      <li>mouseup</li>
+      <li>click</li>
+      <li>dblclick</li>
+      <li>contextmenu</li>
+    </ol>
+
+    <p id="para">Hover over this text to change its color.</p>
+    <p id="mouseText">
+      Press and release the mouse button over this text to change its color.
+    </p>
+  </body>
+  <script>
+    let para = document.getElementById("para");
+    para.addEventListener("mouseover", () => {
+      para.style.color = "blue";
+      para.style.backgroundColor = "black";
+      para.style.padding = "10px";
+    });
+
+    para.addEventListener("mouseout", () => {
+      para.style.color = "white";
+    });
+
+    let mouseText = document.getElementById("mouseText");
+
+    mouseText.addEventListener("mousedown", () => {
+      mouseText.style.color = "red";
+    });
+
+    mouseText.addEventListener("mouseup", () => {
+      mouseText.style.color = "green";
+    });
+  </script>
+</html>
