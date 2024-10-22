@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - DOM </title>
+</head>
+<body>
+    <h1>Add a new HTML Element.</h1>
+    <div class="paragraph">
+        <p id="id1">This is Paragraph.</p>
+        <p id="id2">This is another Paragraph.</p>
+    </div>
+    <span>-----------------------------------------------------------------------------------------------------------------</span>
+    <div class="InsertBefore">
+        <p id="id3">This is Paragraph 1.</p>
+        <p id="id4">This is another Paragraph 1.</p>
+    </div>
+
+    
+    
+
+    <script>
+        const para = document.createElement("p")
+        para.setAttribute("id","input");
+        const node = document.createTextNode("This is new Paragraph");
+        para.appendChild(node);
+        const element = document.getElementsByClassName('paragraph')[0]; // please note [0].
+        element.appendChild(para);
+
+        const anotherPara = document.createElement('p');
+        anotherPara.setAttribute("id","userInput");
+        const text = document.createTextNode("This is new para Insert before the all static para");
+        anotherPara.appendChild(text);
+        const anotherElement = document.getElementsByClassName('InsertBefore')[0];
+        const anotherChild = document.getElementById('id3');
+        anotherElement.insertBefore(anotherPara,anotherChild);
+    </script>
+</body>
+</html>

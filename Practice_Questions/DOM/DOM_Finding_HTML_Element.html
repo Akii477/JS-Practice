@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding HTML Elements</title>
+</head>
+<body>
+    <!-- <h2>JavaScript HTML DOM</h2>
+    <div id="main">
+        <p>Finding HTML Elements by Tag Name Yo!</p>
+        <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+    </div>
+    <p id="demo"></p> -->
+
+    <p>Finding HTML Elements by Query Selector</p>
+    <p class="intro">Hello World!.</p>
+    <p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+    <p id="demo1"></p>
+    <script>
+        // const x = document.getElementById("main");
+        // const y = x.getElementsByTagName("p");
+        // document.getElementById("demo").innerHTML = `The First Paragraph(Index 0) inside main is: ${y[0].innerHTML}`;
+
+
+        let result = document.querySelectorAll('p.intro');
+        document.getElementById("demo1").innerHTML = `The first paragraph (index 0) with class="intro" is: ${result[0].innerHTML}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removing HTML element</title>
+</head>
+<body>
+    <h2>Removing SubChild by <b>removeChild() method</b></h2>
+    <div id="parent">
+        <p id="id5">This is Paragraph 2.</p>
+        <p id="id6">This is another Paragraph 2.</p>
+    </div>
+    <button onclick="removeSubchild()">Submit</button>
+
+    <h2>Removing Child by <b>remove() method</b></h2>
+    <div>
+        <p id="id7">This is Paragraph</p>
+        <p id="id8">This is another Paragraph</p>
+    </div>
+    <button onclick="removeMethod()">See Magic !</button>
+
+    <script>
+        function removeSubchild()
+        {
+            const removingParentElement = document.getElementById('parent');
+            const removingChildElement = document.getElementById("id5");
+            removingParentElement.removeChild(removingChildElement);
+        }
+            //--------------------------------------------------------------------------;
+        
+        function removeMethod()
+        {
+            const child = document.getElementById('id7');
+            child.remove();
+        }
+    </script>
+    
+</body>
+</html>

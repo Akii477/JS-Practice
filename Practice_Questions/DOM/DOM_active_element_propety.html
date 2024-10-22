@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            color: darkred;
+
+        }
+    </style>
+    <script>
+        function activeElements()
+        {
+            let x = document.activeElement.tagName;
+            document.getElementById('showActiveElement').innerHTML = x;
+            
+        }
+    </script>
+    <title>DOM Active Element Property.</title>
+</head>
+<body onclick="activeElements()">
+    <h1>Akash Kushwaha</h1>
+    <h2>Learning HTML DOM active learning property.</h2>
+    <input type="text" name="inptext" placeholder="HEY!">
+    <button type="button">Submit</button>
+    <p id="showActiveElement"></p>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM URL Property.</title>
+</head>
+<body>
+    <h2>DOM document.URL() Property</h2>
+
+    <p>
+        For displaying the URL of the document,
+        double click the "View URL" button:
+    </p>
+
+    <p><b style="color: green; font-size: larger;">THEORY:</b>The DOM URL property in HTML is used to return a string that contains the complete URL of the current document. The string also includes the HTTP protocol such as ( http://).</p>
+
+    <button ondblclick="myURL()">View URL</button>
+    <p id="url"></p>
+
+    <script>
+        function myURL()
+        {
+            let x = document.URL;
+            const result = document.getElementById("url").innerHTML = x;
+            document.getElementById("url").style.color = "red";
+            document.getElementById("url").style.backgroundColor = "black";
+            document.getElementById("url").style.padding = "20px";
+            document.getElementById("url").style.fontWeight= "bold"
+
+;
+
+        }
+    </script>
+
+</body>
+</html>
