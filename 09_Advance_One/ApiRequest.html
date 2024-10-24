@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: white;
+        }
+        pre{
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Learing about API Request: XMLHTTPRequest()</h1>
+    <pre>
+        Value State        Description
+        0 UNSENT           Client has been created. open() not called yet.
+        1 OPENED           open() has been called.
+        2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+        3 LOADING          Downloading; responseText holds partial data.
+        4 DONE             The operation is complete.
+    </pre>
+</body>
+
+<script>
+    const requestURL = "https://api.github.com/users/Akii477";
+    const APIRequest = new XMLHttpRequest();
+    APIRequest.open('GET',requestURL); 
+    APIRequest.onreadystatechange = function()
+    {
+        console.log(APIRequest.readyState);
+        if(APIRequest.readyState == 4) 
+        {
+            const data = JSON.parse(this.responseText); // data comes as STRING we have to convert it.
+            console.log(typeof data);
+            console.log(data.name);
+            console.log(data.public_repos);
+            
+            
+            
+        }
+        
+    }
+
+    APIRequest.send(); // to call xmlhttprequest // open do not call the xmlhttprequest.
+</script>
+
+</html>
