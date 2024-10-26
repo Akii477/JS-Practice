@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Scoping and Closures</title>
+    <style>
+        body{
+            background-color: #212121;
+        }
+    </style>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // function init()
+    // {
+    //     let name = "Mozilla";
+    //     function displayName()
+    //     {
+    //         console.log(name);
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    function outer()
+    {
+        let username = "Akash";
+        function inner()
+        {
+            console.log("Inner:",username);
+            
+        }
+        inner();
+    }
+    outer();
+    console.log("Tooo OUTER:",username); //outer function call
+</script>
+<script>
+    // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+            //if not create a function it will not run properly because we know onclick method neeeds funtion to run in that case we need to know closures 
+
+            // with the help of closures the whole lexical scope is returned that means it have access of color property.
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+
+</script>
+</html>
